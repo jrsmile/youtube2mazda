@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "#################################################"
+echo "... JRSmile's Youtube 2 Mazda Konverter ..."
+echo "#################################################"
+echo "[network] Downloading via German ISP"
+youtube-dl --prefer-insecure --download-archive archive.dat --proxy "" --ignore-config -i --no-continue -w -f 135+bestaudio[ext=m4a] --no-progress --no-post-overwrites -o '%(title)s.%(ext)s' $1
+echo "[network] Downloading via Luxembourg ISP"
+youtube-dl --prefer-insecure --download-archive archive.dat --proxy http://127.0.0.1:8123/ --ignore-config -i --no-continue -w -f 135+bestaudio[ext=m4a] --no-progress --no-post-overwrites -o '%(title)s.%(ext)s' $1
+echo "Done, please copy to Mazda."
