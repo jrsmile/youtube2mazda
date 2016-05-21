@@ -1,5 +1,5 @@
 # youtube2mazda
-youtube-dl configuration script for easy geration of mp4 videos to be played via mazda connect (MZD) via USB-Stick.
+youtube-dl configuration script for easy generation of mp4 videos to be played via mazda connect (MZD) via USB-Stick.
 
 requirements:
 
