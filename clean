@@ -1,0 +1,13 @@
+#!/bin/bash
+shopt -s nullglob
+for f in *.mp4
+do
+        echo "Cleaning File: $f"
+        IN=$f
+        OUT=$(echo $f | sed -e 's/([^()]*)//g' | sed -e 's/\[[^][]*\]//g' | tr -s " "| sed -e 's/ .mp4/.mp4/g' )
+        if [ "$IN" != "$OUT" ]
+        then
+                mv "$IN" "$OUT"
+                echo "Renamed to: $OUT"
+        fi
+done
